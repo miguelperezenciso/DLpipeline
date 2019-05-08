@@ -1,6 +1,6 @@
 ## DLpipeline
 ### A Guide on Deep Learning for Genomic Prediction: A Keras based pipeline to implement deep learning
-#### M Pérez-Enciso & ML Zingaretti
+#### M Pérez-Enciso & LM Zingaretti
 #### miguel.perez@uab.es, laura.zingaretti@cragenomica.es
 
 If you find this resource useful, please cite:
@@ -97,7 +97,7 @@ The loss is a measure of how differences between observed and predicted target v
 
 Categorical cross-entropy is defined, for *M* classes, as 
  
- -Sum
+$-\sum_{i=1}^{N}\sum_{c=1}^{M}\gamma_{ic}log(p_{ic})$
 
 where *N*is the number of observations, *Gic*is an indicator variable taking value 1 if i-th observation pertains to c-th class and 0 otherwise, and *Pic* is the predicted probability for i-th observation of being of class c. 
 
