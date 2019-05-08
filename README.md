@@ -127,9 +127,6 @@ model.add(Activation('softplus'))
 model.add(Dense(1))
 ```
 
-### Implementing Generative Networks 
-A Keras implementation of GANs can be found at https://github.com/eriklindernoren/Keras-GAN. 
-
 ### Implementing Recurrent Neural Neiworks (RNNs)
 The following model is a simple implementation of 3 layers of LSTM with 256 neurons per layer:
  
@@ -154,6 +151,9 @@ model.compile(loss=mse, optimizer=adam, metrics=['mae'])
 # prints some details
 model.summary()
 ```
+
+### Implementing Generative Networks 
+A Keras implementation of GANs can be found at https://github.com/eriklindernoren/Keras-GAN. 
 
 ### Loss
 The loss is a measure of how differences between observed and predicted target variables are quantified. Keras allows three simple metrics to deal with quantitative, binary or multiclass outcome variables: mean squared error, binary cross entropy and multiclass cross entropy, respectively. Several other losses are also possible or can be manually specified. 
