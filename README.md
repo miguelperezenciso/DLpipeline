@@ -9,7 +9,7 @@ Pérez-Enciso M, Zingaretti ML, 2019. A Guide on Deep Learning for Genomic Predi
 
  * * *
  
-Here we describe some Keras implementation details. Complete code is in jupyter notebook, and example data are DATA folder. To run the You need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
+Here we describe some Keras implementation details. Complete code is in (jupyter notebook)[https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL.ipynb], and example data are (DATA)[https://github.com/miguelperezenciso/DLpipeline/tree/master/DATA] folder. To run the You need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
 ### Implementing Multilayer Perceptrons (MLPs)
 In Keras, a MLP is implemented by adding ‘dense’ layers. In the following code, a two layer MLP with 64 and 32 neurons is defined, where the input dimension is 200 (i.e., the number of SNPs):
