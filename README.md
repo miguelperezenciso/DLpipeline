@@ -27,7 +27,37 @@ An analysis pipeline in Keras requires of five main steps:
 A generic Keras script would look like:
 
 ```
+# Training and validation data sets
 
+# no. of SNPs in data
+nSNP=X_train.shape[1] 
+
+# Instantiate
+model = Sequential()
+
+# Add first layer containing 64 neurons
+model.add(Dense(64, input_dim=nSNP))
+model.add(Activation('relu'))
+# Add second layer, with 32 neurons
+model.add(Dense(32))
+model.add(Activation('softplus'))
+# Last, output layer contains one neuron (ie, target is a real numeric value)
+model.add(Dense(1))
+
+# Model Compiling 
+model.compile(loss='mean_squared_error', optimizer='sgd')
+
+# list some properties of the network
+model.summary()
+
+# Training
+model.fit(X_train, y_train, epochs=100)
+
+# Cross-validation: get predicted target values
+y_hat = model.predict(X_test)
+
+# Computes squared error in prediction
+mse_prediction = model.evaluate(X_test, y_test)
 ```
 
 ### Implementing Multilayer Perceptrons (MLPs)
