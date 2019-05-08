@@ -13,6 +13,15 @@ Here we describe some Keras implementation details. Complete code is in [jupyter
 
 To run the script, you need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
+### A Generic Keras Pipeline
+
+An analysis pipeline in Keras requires of five main steps:
+1-	A model is instantiated: The most usual model is ```Sequential```, which allows adding layers with different properties step by step.
+2-	The architecture is defined: Here, each layer and its properties are defined. For each layer, number of neurons, activation functions, regularization and initialization methods are specified.
+3-	The model is compiled: Optimizer algorithm with associated parameters (e.g., learning rate) and loss function are specified. This step allows us to symbolically define the operations (‘graphs’) to be performed later with actual numbers.
+4-	Training: The model is fitted to the data and parameters are estimated. The number of iterations (‘epochs’) and batch size are specified, input and target variables need to be provided. The input data size must match that defined in step 2.
+5-	Model predictions are validated via cross-validation.
+
 ### Implementing Multilayer Perceptrons (MLPs)
 In Keras, a MLP is implemented by adding ‘dense’ layers. In the following code, a two layer MLP with 64 and 32 neurons is defined, where the input dimension is 200 (i.e., the number of SNPs):
 
