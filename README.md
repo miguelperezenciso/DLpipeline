@@ -130,19 +130,22 @@ Keras allows implementing early stopping via the callback procedure. The user ne
 from keras.callbacks import EarlyStopping, Callback
 
 early_stopper = EarlyStopping(monitor='val_loss', 					
-min_delta=0.1, 
-patience=2, 
-verbose=0, 
-mode='auto')
-model.fit(X_train, y_train, 
-										epochs=100, 		
-verbose=1, 
-validation_data(X_test, y_test), 
-		callbacks=[early_stopper])
+                min_delta=0.1, 
+                patience=2, 
+                verbose=0, 
+                mode='auto')
+		
+model.fit(X_train, 
+          y_train, 
+          epochs=100, 		
+          verbose=1, 
+          validation_data(X_test, y_test), 
+          callbacks=[early_stopper])
 ```
 
 In Keras, the available regularizers are L1 and L2 norm regularizers, i.e., Eq. 6, Eq.7, which can also be combined in the so called ‘Elastic Net’ procedure, i.e., a mixed L1 and L2 regularization. In Keras, regularizers are applied to either kernels (weights), bias or activity (neuron output) and are specified together with the rest of layer properties, e.g.:
 
+```
 from keras.models import Sequential
 from keras.layers import Dense, Activation 
 from keras import regularizers
@@ -150,8 +153,11 @@ from keras import regularizers
 model.add(Dense(64, input_dim=64,
 kernel_regularizer=regularizers.l2(0.01), 
 activity_regularizer=regularizers.l1(0.01)))
+```
 
-In Keras, different dropout rates can be specified for each layer, after its definition, e.g.:
+In Keras, different **dropout** rates can be specified for each layer, after its definition, e.g.:
 
+```
 model.add(Dense(30, activation='relu'))
 model.add(Dropout(0.2))
+```
