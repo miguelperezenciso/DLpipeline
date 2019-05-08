@@ -28,25 +28,27 @@ A generic Keras script would look like:
 
 ```
 # Load modules needed
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # keras items 
-from keras import regularizers
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 
 # Load the dataset as a pandas data frame
+# X is a N by nSNP array with SNP genotypes
 X = pd.read_csv('DATA/wheat.X', header=None, sep='\s+')
+# Y is a N b nTRAIT array with phenotypes
 Y = pd.read_csv('DATA/wheat.Y', header=None, sep='\s+')
 # The first trait is analyzed
 y = Y[0] 
 
-# Data partitioning into train and validation (20%)
+# Data partitioning into train and test (20%)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # no. of SNPs in data
-nSNP=X_train.shape[1] 
+nSNP = X_train.shape[1] 
 
 # Instantiate model
 model = Sequential()
