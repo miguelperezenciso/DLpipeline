@@ -9,7 +9,7 @@ Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Genomic Predi
 
 and possibly
 
-Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.
+[Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
 
  * * *
  
