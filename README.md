@@ -27,7 +27,29 @@ An analysis pipeline in Keras requires of five main steps:
 A generic Keras script would look like:
 
 ```
-# Training and validation data sets
+# Load modules needed
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+# keras items 
+from keras import regularizers
+from keras.models import Sequential, load_model
+from keras.layers import Dense, Activation, Dropout
+from keras.layers import Flatten, Conv1D, MaxPooling1D, LSTM #CNNs
+from keras.activations import relu, elu, linear, softmax
+from keras.callbacks import EarlyStopping, Callback
+from keras.wrappers.scikit_learn import KerasRegressor
+from keras.optimizers import adam, Nadam, sgd
+from keras.losses import mean_squared_error, categorical_crossentropy, logcosh
+
+# Load the dataset as a pandas data frame
+X = pd.read_csv('DATA/wheat.X', header=None, sep='\s+')
+Y = pd.read_csv('DATA/wheat.Y', header=None, sep='\s+')
+# The first trait is analyzed
+y = Y[0] 
+
+# Data partitioning into train and validation (20%)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # no. of SNPs in data
 nSNP=X_train.shape[1] 
