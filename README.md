@@ -94,10 +94,14 @@ model.summary()
 
 ### Loss
 The loss is a measure of how differences between observed and predicted target variables are quantified. Keras allows three simple metrics to deal with quantitative, binary or multiclass outcome variables: mean squared error, binary cross entropy and multiclass cross entropy, respectively. Several other losses are also possible or can be manually specified. 
-Categorical cross-entropy is defined, for M classes, as 
- 
 
-where N is the number of observations, ic is an indicator variable taking value 1 if  i-th observation pertains to c-th class and 0 otherwise, and pic is the predicted probability for i-th observation of being of class c. Losses are declared in compiling the model:
+Categorical cross-entropy is defined, for *M* classes, as 
+ 
+ -Sum
+
+where *N*is the number of observations, *Gic*is an indicator variable taking value 1 if i-th observation pertains to c-th class and 0 otherwise, and *Pic* is the predicted probability for i-th observation of being of class c. 
+
+Losses are declared in compiling the model:
 
 ```
 # Stochastic Gradient Descent (‘sgd’) as optimization algorithm
