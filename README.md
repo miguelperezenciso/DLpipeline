@@ -5,7 +5,7 @@
 
 If you find this resource useful, please cite:
 
-Pérez-Enciso M, Zingaretti ML, 2019. A Guide on Deep Learning for Genomic Prediction. submitted
+Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Genomic Prediction. submitted
 
  * * *
  
