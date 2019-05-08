@@ -187,9 +187,11 @@ model.compile(loss='binary_crossentropy', optimizer=’sgd’)
 
 # multi class classification
 model.compile(loss='categorical_crossentropy', optimizer=’sgd’)
+```
 
 When using categorical losses, your targets should be in categorical format. In order to convert integer targets into categorical targets, you can use the Keras utility to_categorical:
 
+``` 
 from keras.utils import to_categorical
 categorical_labels = to_categorical(int_labels, num_classes=None)
 ```
