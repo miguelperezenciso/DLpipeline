@@ -159,6 +159,13 @@ model.summary()
 ### Implementing Generative Networks 
 A Keras implementation of GANs can be found at https://github.com/eriklindernoren/Keras-GAN. 
 
+### Activation Functions
+In Keras, activation is defined for every Dense layer as
+
+```model.add(Activation(‘activation’))```
+
+where ```‘activation’``` can take values ‘sigmoid’, ‘relu’, etc (https://keras.io/activations/). The activation by default in Keras is ‘linear’, i.e., no function.  
+
 ### Loss
 The loss is a measure of how differences between observed and predicted target variables are quantified. Keras allows three simple metrics to deal with quantitative, binary or multiclass outcome variables: mean squared error, binary cross entropy and multiclass cross entropy, respectively. Several other losses are also possible or can be manually specified. 
 
@@ -189,12 +196,8 @@ categorical_labels = to_categorical(int_labels, num_classes=None)
 
 See https://keras.io/utils/#to_categorical. 
 
-### Activation Functions
-In Keras, activation is defined for every Dense layer as
-
-```model.add(Activation(‘activation’))```
-
-where ```‘activation’``` can take values ‘sigmoid’, ‘relu’, etc (https://keras.io/activations/). The activation by default in Keras is ‘linear’, i.e., no function.  
+### Optimizers
+XXX
 
 ### Protection against Overfitting
 Keras allows implementing **early stopping** via the callback procedure. The user needs to provide a monitored quantity, say test loss, and the program stops when it stops improving (https://keras.io/callbacks/#earlystopping):
