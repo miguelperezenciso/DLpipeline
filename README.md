@@ -9,18 +9,26 @@ Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Genomic Predi
 
  * * *
  
+Implementing DL, despite all its theoretical and computational complexities, is rather easy. This is thanks to Keras API (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), which allow all intricacies to be encapsulated through very simple statements. TensorFlow is a machine-learning library developed by Google. In addition, the machine-learning python library scikit-learn (https://scikit-learn.org) is highly useful. Directly implementing DL in TensorFlow requires some knowledge of DL algorithms, and understanding the philosophy behind tensor (i.e., n-dimensional objects) manipulations. Fortunately, this can be avoided using Keras, a high-level python interface for TensorFlow and other DL libraries. Although alternatives to TensorFlow and Keras exist, we believe these two tools combined are currently the best options: they are simple to use and are well documented. 
+
 Here we describe some Keras implementation details. Complete code is in [jupyter notebook](https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL.ipynb), and example data are [DATA](https://github.com/miguelperezenciso/DLpipeline/tree/master/DATA) folder. 
 
-To run the script, you need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
+To run the script, you need to have installed Keras and TensorFlow, preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
 ### A Generic Keras Pipeline
 
 An analysis pipeline in Keras requires of five main steps:
 * A model is instantiated: The most usual model is ```Sequential```, which allows adding layers with different properties step by step.
 * The architecture is defined: Here, each layer and its properties are defined. For each layer, number of neurons, activation functions, regularization and initialization methods are specified.
-3 The model is compiled: Optimizer algorithm with associated parameters (e.g., learning rate) and loss function are specified. This step allows us to symbolically define the operations (‘graphs’) to be performed later with actual numbers.
-4 Training: The model is fitted to the data and parameters are estimated. The number of iterations (‘epochs’) and batch size are specified, input and target variables need to be provided. The input data size must match that defined in step 2.
-5 Model predictions are validated via cross-validation.
+* The model is compiled: Optimizer algorithm with associated parameters (e.g., learning rate) and loss function are specified. This step allows us to symbolically define the operations (‘graphs’) to be performed later with actual numbers.
+* Training: The model is fitted to the data and parameters are estimated. The number of iterations (‘epochs’) and batch size are specified, input and target variables need to be provided. The input data size must match that defined in step 2.
+* Model predictions are validated via cross-validation.
+
+A generic Keras script would look like:
+
+```
+
+```
 
 ### Implementing Multilayer Perceptrons (MLPs)
 In Keras, a MLP is implemented by adding ‘dense’ layers. In the following code, a two layer MLP with 64 and 32 neurons is defined, where the input dimension is 200 (i.e., the number of SNPs):
