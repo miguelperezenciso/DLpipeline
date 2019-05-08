@@ -160,7 +160,7 @@ The loss is a measure of how differences between observed and predicted target v
 
 Categorical cross-entropy is defined, for *M* classes, as 
  
-$-\sum_{i=1}^{N}\sum_{c=1}^{M}\gamma_{ic}log(p_{ic})$
+&sum;<sub>i=1</sub>&sum;<sub>c=1</sub>&gamma;log(p<sub>ic</sub>), with i=1..N, c=1..M
 
 where *N*is the number of observations, *Gic*is an indicator variable taking value 1 if i-th observation pertains to c-th class and 0 otherwise, and *Pic* is the predicted probability for i-th observation of being of class c. 
 
