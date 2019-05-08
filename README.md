@@ -189,7 +189,7 @@ model.compile(loss='binary_crossentropy', optimizer=’sgd’)
 model.compile(loss='categorical_crossentropy', optimizer=’sgd’)
 ```
 
-When using categorical losses, your targets should be in categorical format. In order to convert integer targets into categorical targets, you can use the Keras utility to_categorical:
+When using categorical losses, your targets should be in categorical format. In order to convert integer targets into categorical targets, you can use the Keras utility ```to_categorical```:
 
 ``` 
 from keras.utils import to_categorical
