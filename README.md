@@ -124,7 +124,7 @@ In Keras, activation is defined for every Dense layer as
 where ```‘activation’``` can take values ‘sigmoid’, ‘relu’, etc (https://keras.io/activations/). The activation by default in Keras is ‘linear’, i.e., no function.  
 
 ### Protection against Overfitting
-Keras allows implementing early stopping via the callback procedure. The user needs to provide a monitored quantity, say test loss, and the program stops when it stops improving (https://keras.io/callbacks/#earlystopping):
+Keras allows implementing **early stopping** via the callback procedure. The user needs to provide a monitored quantity, say test loss, and the program stops when it stops improving (https://keras.io/callbacks/#earlystopping):
 
 ```
 from keras.callbacks import EarlyStopping, Callback
@@ -143,7 +143,7 @@ model.fit(X_train,
           callbacks=[early_stopper])
 ```
 
-In Keras, the available regularizers are L1 and L2 norm regularizers, i.e., Eq. 6, Eq.7, which can also be combined in the so called ‘Elastic Net’ procedure, i.e., a mixed L1 and L2 regularization. In Keras, regularizers are applied to either kernels (weights), bias or activity (neuron output) and are specified together with the rest of layer properties, e.g.:
+In Keras, the available **regularizers** are L1 and L2 norm regularizers, which can also be combined in the so called ‘Elastic Net’ procedure, i.e., a mixed L1 and L2 regularization. In Keras, regularizers are applied to either kernels (weights), bias or activity (neuron output) and are specified together with the rest of layer properties, e.g.:
 
 ```
 from keras.models import Sequential
