@@ -5,15 +5,14 @@
 
 If you find this resource useful, please cite:
 
-Pérez-Enciso M, Zingaretti ML, 2019. 
-A Guide on Deep Learning for Genomic Prediction. 
-submitted
+Pérez-Enciso M, Zingaretti ML, 2019. A Guide on Deep Learning for Genomic Prediction. submitted
 
-Here we describe some Keras implementation details. Complete code and example data are at https://github.com/miguelperezenciso/DLpipeline. You need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
+Here we describe some Keras implementation details. Complete code is in jupyter notebook, and example data are DATA folder. To run the You need to have installed Keras (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
-Implementing Multilayer Perceptrons (MLPs)
+### Implementing Multilayer Perceptrons (MLPs)
 In Keras, a MLP is implemented by adding ‘dense’ layers. In the following code, a two layer MLP with 64 and 32 neurons is defined, where the input dimension is 200 (i.e., the number of SNPs):
 
+```
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 
@@ -28,12 +27,14 @@ model.add(Dense(32))
 model.add(Activation('softplus'))
 # Last, output layer with linear activation (default)
 model.add(Dense(1))
+```
 
 As is clear from the code, activation functions are ‘relu’ and ‘softplus’ in the first and second layer, respectively.
 
-Implementing Convolutional Neural Networks (CNNs)
+### Implementing Convolutional Neural Networks (CNNs)
 The following Keras code illustrates how a convolutional layer with max pooling is applied prior to the MLP described above:
 
+```
 from keras.models import Sequential
 from keras.layers import Dense, Activation 
 from keras.layers import Flatten, Conv1D, MaxPooling1D
@@ -57,8 +58,9 @@ model.add(Activation('relu'))
 model.add(Dense(32))
 model.add(Activation('softplus'))
 model.add(Dense(1))
+```
 
-Implementing Generative Networks 
+### Implementing Generative Networks 
 A Keras implementation of GANs can be found at https://github.com/eriklindernoren/Keras-GAN. 
 
 Implementing Recurrent Neural Neiworks (RNNs)
