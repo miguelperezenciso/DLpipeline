@@ -15,7 +15,7 @@ Here we describe some Keras implementation details. Complete code is in [jupyter
 
 ### A Generic Keras Pipeline
 
-An analysis pipeline in Keras requires of five main steps:
+After uploading, preprocessing and partitioning the dataset, an analysis pipeline in Keras requires of five main steps:
 * A model is instantiated: The most usual model is ```Sequential```, which allows adding layers with different properties step by step.
 * The architecture is defined: Here, each layer and its properties are defined. For each layer, number of neurons, activation functions, regularization and initialization methods are specified.
 * The model is compiled: Optimizer algorithm with associated parameters (e.g., learning rate) and loss function are specified. This step allows us to symbolically define the operations (‘graphs’) to be performed later with actual numbers.
