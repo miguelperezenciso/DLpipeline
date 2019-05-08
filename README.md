@@ -162,7 +162,7 @@ Categorical cross-entropy is defined, for *M* classes, as
  
 &sum;<sub>i=1</sub>&sum;<sub>c=1</sub>&gamma;log(p<sub>ic</sub>), with i=1..N, c=1..M
 
-where *N*is the number of observations, *&gamma* is an indicator variable taking value 1 if i-th observation pertains to c-th class and 0 otherwise, and *Pic* is the predicted probability for i-th observation of being of class c. 
+where *N* is the number of observations, &gamma is an indicator variable taking value 1 if i-th observation pertains to c-th class and 0 otherwise, and *P* is the predicted probability for i-th observation of being of class c. 
 
 Losses are declared in compiling the model:
 
