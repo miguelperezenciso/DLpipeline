@@ -199,8 +199,8 @@ categorical_labels = to_categorical(int_labels, num_classes=None)
 See https://keras.io/utils/#to_categorical. 
 
 ### Optimizers
-One of the most popular numerical algorithms to optimize a loss function is Gradient Descent. The algorithm requires a function, which usually is convex or at least quasi-convex. We can mention three variants of GD algorithms: **Batch gradient descent**, which computes the gradient of the loss function for the whole training data- set , **Stochastic gradient descent** consists in randomly partitioning the whole data set in subsets called ‘batches’ and update the gradient using only a single subset, then the next batch is used in next iteration and, finally the combination of the previous methods called **minibatch gradient descent**  which split the training dataset into small batches. The gradient is averaged over a small number of samples allowing to noise reducing and the code speed acceleration.
- SGD can be outperform implementing some modification over the original optimizer as:
+One of the most popular numerical algorithms to a loss function optimization is the Gradient Descent. The algorithm requires a function, which usually is convex or at least quasi-convex. We can mention three variants of GD algorithms: **Batch gradient descent**, which computes the gradient of the loss function for the whole training data- set , **Stochastic gradient descent** consists on randomly partitioning the whole data set in subsets called ‘batches’ and update the gradient using only a single subset, then the next batch is used for the next iteration and, finally  **minibatch gradient descent**  which  is a combination of the two previous methods and it is based on spliting the training dataset into small batches. The gradient is averaged over a small number of samples allowing to noise reducing and the code speed acceleration.
+ SGD can be outperform implementing some optimizers as:
  
  - MOMENTUM accelerates SGD by moving on the relevant direction. The term increases when the gradients are moving on the same direction, and reduces otherwise. Keras SGD function has the momentum option, which is 0.0 at default. 
  
