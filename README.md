@@ -199,15 +199,28 @@ categorical_labels = to_categorical(int_labels, num_classes=None)
 See https://keras.io/utils/#to_categorical. 
 
 ### Optimizers
-One of the most popular numerical algorithms to optimize a loss is the Gradient Descent. The algorithm requires a function, which usually is convex or at least quasi-convex. We can mention three variants of GD: **Batch gradient descent**, which computes the loss function gradient for the whole training data- set , **Stochastic gradient descent** which consists on randomly partitioning the whole data set in subsets called ‘batches’ and update the gradient using only a single subset, then the next batch is used for the next iteration and, finally  **minibatch gradient descent**,  which  is a combination of the two previous methods and it is based on spliting the training dataset into small batches. The gradient is averaged over a small number of samples allowing to noise reducing and the code speed acceleration.
+One of the most popular numerical algorithms to optimize a loss is the **Gradient Descent**. We can mention three variants of GD: **Batch gradient descent**, which computes the loss function gradient for the whole training data-set , **Stochastic gradient descent (SGD)** which consists of randomly partitioning the whole data set in subsets called ‘batches’ and update the gradient using only a single subset, then the next batch is used for the next iteration and, finally,  **minibatch gradient descent**,  which  is a combination of the two previous methods and it is based on spliting the training dataset into small batches. The gradient is averaged over a small number of samples allowing to reduce noise and code speed acceleration. Numerous optimizers exist and no clear rule on which one is best exist.
 
- SGD can be outperform implementing some optimizers as:
+ SGD can be outperformed by SGD variants such as:
  
- - **MOMENTUM** accelerates SGD by moving on the relevant direction. The term increases when the gradients are moving on the same direction, and reduces otherwise. Keras SGD function has the momentum option, which is 0.0 at default. 
+ - **MOMENTUM** accelerates SGD by moving on the relevant direction. The term increases when the gradients are moving in the same direction, and is reduced otherwise. Keras SGD function has the momentum option, which is 0.0 at default. 
  
 -  **NESTEROV** is also implemented in keras sgd, being False at default. It is a predictor- corrector algorithm which generally overcomes the Momentum estimator.  It is implemented into two steps: in the predictor stage, the trajectory is linearly extrapolated as in the Moment, but in the second stage, it is corrected resulting on a convergence acceleration. 
 
-Keras also implements some adaptative optimizers functions as **ADAGRAD**, **ADADELTA**, **RMSPROP**, **ADAM**, **ADAMAX**. **Adagrad** allows to control the learning rate considering the occurrence of parameters updates, i.e. the learning rate drops when the frequency of updates increases. It is recommended when data are sparse. **Adadelta** is an extension of the Adagrad which only adapts learning rates basing on a restricted windows (w) of past gradients. **RMSPROP** (Root mean Square Propagation) is also an adaptative learning rate algorithm which combines SGD and Root mean square propagation. Basically, it uses the exponential weighted average instead of individual gradient of w at the backprop state adjusting, at once, the learning rate. It shows a good behavior in Recurrent Neural Networks. **Adam** is an adaptative moment method where a learning rate is maintained for each weight and separately adapted. **Adamax** is a variant of Adam based on infinite norm and finally, **Nadam** is a combination of Nesterov and Adam algorithms. 
+These optimizers can be implemented in Keras as:
+
+```
+sgd = optimizers.SGD(momentum=0.9, nesterov=True)
+model.compile(loss='mean_squared_error', optimizer=sgd)
+```
+
+Keras also implements some adaptative optimizers functions as: 
+- **Adagrad** allows to control the learning rate considering the occurrence of parameters updates, i.e. the learning rate drops when the frequency of updates increases. It is recommended when data are sparse. 
+- **Adadelta** is an extension of the Adagrad which only adapts learning rates basing on a restricted windows (w) of past gradients. 
+- **RMSPROP** (Root mean Square Propagation) is also an adaptative learning rate algorithm which combines SGD and Root mean square propagation. Basically, it uses the exponential weighted average instead of individual gradient of w at the backprop state adjusting, at once, the learning rate. It shows a good behavior in Recurrent Neural Networks. 
+- **Adam** is an adaptative moment method where a learning rate is maintained for each weight and separately adapted. 
+- **Adamax** is a variant of Adam based on infinite norm
+- **Nadam** is a combination of Nesterov and Adam algorithms. 
 
 See https://keras.io/optimizers/ 
 
