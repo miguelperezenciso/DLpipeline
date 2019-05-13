@@ -285,7 +285,7 @@ The next table lists the main DL hyperparameters:
 |Hyperparameter|Role | Issues |
 | :-------: | :------: | :-----: |
 |Optimizer  |Algorithm to optimize the loss function. Most are based in SGD.| Optimization algorithms for training deep models includes some specializations to solve different challenges. |
-|Learning rate | Specify the speed of gradient update.|Can result in meandering if too low and in reaching local maxima if too high |
+|Learning rate | Specify the speed of gradient update.|Can result in meandering if too low and in reaching local maxima if too high. |
 |Batch size|Determines number of samples in each SGD step.  | Can slow convergence if too small.|
 |Number of layers | Controls flexibility to  |The bigger the number, the higher the flexibility but may increase overfitting.|
 |Neurons per layer|The bigger the number, the higher the flexibility.|The bigger the number, the higher the flexibility but may increase overfitting and poor training.|
