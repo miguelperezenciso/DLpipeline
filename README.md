@@ -273,9 +273,23 @@ model.add(Dense(30, activation='relu'))
 model.add(Dropout(0.2))
 ```
 
-### Hyperparameter Optmization
+### Hyperparameter Optimization
 DL is not a single method, it is a heterogenous class of machine learning algorithms that depend on numerous hyperparameters, e.g., number of layers, neurons per layer, dropout rate, activation function and so on. DL optimization does require a general idea of which hyperparameters to optimize, together with a plausible range of values. Optimizing hyperparameter values is perhaps the most daunting task in using DL, which of course need to be done without resorting to the validation datasets!, and has been the topic of multitude of specialized papers. While for certain tasks like image analyses there are some specialized pre-trained networks or general architectures, this is not the case for new problems such as genomic prediction. 
 
 In any realistic scenario, it is impossible to explore the whole space of hyperparameters, and sensible ranges should be chosen a priori. For instance, it is probably unnecessary to go beyond 3 – 5 layers or over say 100 neurons per layer. Testing up to four activation functions should probably capture all expected patterns. Similarly, each of dropout, L1 or L2 regularization does the same job and so only one hyperparameter can be explored. As for the optimization algorithm, we have not found important differences among those for the case of genomic prediction. If you are using CNNs, additional hyperparameters can be tuned, mainly number of filters and kernel width. In our experience with human data ([Bellot et al 2018](https://www.genetics.org/content/210/3/809)), the optimum kernel width was very small (~ three SNPs) but this will likely depend on the extent of linkage disequilibrium between markers and on the genetic architecture of the phenotype.
 
 Once an initial hyperparameter space has been specified, a grid search could be performed if the number of hyperparameters is not very large (say ≤ 4), although a random search is much more efficient ([Goodfellow et al. 2016](https://www.deeplearningbook.org/)). Finally, other sophisticated approaches can be envisaged, such as genetic algorithms. In [Bellot et al 2018](https://www.genetics.org/content/210/3/809), we modified the implementation by Jan Liphardt (https://github.com/jliphard/DeepEvolve). The modified script can be retrieved from https://github.com/paubellot/DeepEvolve and https://github.com/paubellot/DL-Biobank/tree/master/GA. Our recommendation is that the number of generations should be relatively large. If computing time is too large, the data could be split into smaller subsets. In any case, we do recommend some narrow grid / random search to be performed around values suggested by the genetic algorithm. Note that optimizing hyperparameters for all desired marker sets and phenotypes will be unfeasible. We recommend choosing a few hyperparameter combinations that are near-optimum across a range of phenotypes / marker sets and that span a diversity of architectures, e.g., with varying neuron layers.
+
+The next table lists the main DL hyperparameters:
+
+|Hyperparameter|Role | Issues |
+| :-------: | :------: | :-----: |
+|Optimizer  |Algorithm to optimize the loss function. Most are based in SGD.| Optimization algorithms for training deep models includes some specializations to solve different challenges. |
+|Learning rate | Specify the speed of gradient update.|Can result in meandering if too low and in reaching local maxima if too high |
+|Batch size|Determines number of samples in each SGD step.  | Can slow convergence if too small.|
+|Number of layers | Controls flexibility to  |The bigger the number, the higher the flexibility but may increase overfitting.|
+|Neurons per layer|The bigger the number, the higher the flexibility.|The bigger the number, the higher the flexibility but may increase overfitting and poor training.|
+|Convolutinal kernel width*|A larger kernel allows learning more complex patterns.|A larger kernel allows learning more complex patterns.|
+|Activation|Makes possible to learn non-linear complex functional mappings between the inputs and response variable|Numerous options. No uniformly best function.|
+|Weight regularization|Controls overfitting.|Decreasing the weight regularization allows the model to fit the training data better.|
+|Dropout|Controls overfitting.|A higher dropout helps to reduce overfitting.|
