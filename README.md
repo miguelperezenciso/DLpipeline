@@ -164,8 +164,7 @@ In Keras, activation is defined for every Dense layer as
 
 ```model.add(Activation(‘activation’))```
 
-where ```‘activation’``` can take values ‘sigmoid’, ‘relu’, etc (https://keras.io/activations/). The activation by default in Keras is ‘linear’, i.e., no function.  
-
+where ```‘activation’``` can take values ‘sigmoid’, ‘relu’, etc (https://keras.io/activations/). 
 ### Loss
 The loss is a measure of how differences between observed and predicted target variables are quantified. Keras allows three simple metrics to deal with quantitative, binary or multiclass outcome variables: mean squared error, binary cross entropy and multiclass cross entropy, respectively. Several other losses are also possible or can be manually specified. 
 
@@ -197,6 +196,16 @@ categorical_labels = to_categorical(int_labels, num_classes=None)
 ```
 
 See https://keras.io/utils/#to_categorical. 
+
+The next table shows the most common combinations of Loss Function and Last Layer Activation to different problems. 
+
+|Problem | Last Layer Activation | Loss |
+| :-------: | :------: | :-----: |
+| Binary classification  | Sigmoid| Binary cross-entropy|
+| Multiclass  | Softmax    |Categorical cross-entropy |
+| Regression  | Linear     |  MSE  |
+| 'Logistic' Regression | Sigmoid  |MSE/Binary cross-entropy|
+
 
 ### Optimizers
 One of the most popular numerical algorithms to optimize a loss is the **Gradient Descent**. We can mention three variants of GD: **Batch gradient descent**, which computes the loss function gradient for the whole training data-set , **Stochastic gradient descent (SGD)** which consists of randomly partitioning the whole data set in subsets called ‘batches’ and update the gradient using only a single subset, then the next batch is used for the next iteration and, finally,  **minibatch gradient descent**,  which  is a combination of the two previous methods and it is based on spliting the training dataset into small batches. The gradient is averaged over a small number of samples allowing to reduce noise and code speed acceleration. Numerous optimizers exist and no clear rule on which one is best exist.
