@@ -22,24 +22,24 @@ DL is full of specific terms, here a few of the most relevant terms are defined 
 
 |Term|Definition|
 |:----:|----------|
-|**Loss**|Loss function measures how differences between observed and predicted target variables are quantified.|
-|**Optimizer**|Algorithm to find weights (w and b) that minimize the loss function. Most DL optimizers are based on Stochastic Gradient Descent (SGD).|
+|**Activation function**|The mathematical function f that produces neuron’s output f(w’x + b).|
 |**Backpropagation**|Backpropagation is an efficient algorithm to compute the loss, it propagates the error at the output layer level backward. Then, the gradient of previous layers can be computed easily using the chain rule for derivatives.|
-|**Stochastic Gradient Descent (SGD)**|An optimizing algorithm that consists of randomly partitioning the whole data set in subsets called ‘batches’ or ‘minibatches’ and update the gradient using only that data subset. The next batch is used in next iteration.|
-|**Epoch**|In SGD and related algorithms, an iteration comprising all batches in a given partition. In the next epoch, a different partition is employed.|
-|**Learning rate**| Specify the speed of gradient update|
 |**Batch**|In SGD, each of the sample partitions within a given epoch|
+|**Convolutional Neural Network (CNN)**|CNNs are an especial case of Neural Networks which uses convolution instead a full matrix multiplication in the hidden layers. A typical CNN is made up of dense fully connected layers and ‘convolutional layers’. The convolution is a type of linear mathematical operation.  |
+|**Dropout**|Dropout means that a given percentage of neurons output is set to zero. The percentage is kept constant, but the specific neurons are randomly sampled in every iteration. The goal of dropout is to avoid overfitting.|
+|**Early stopping**|An anti-overfitting strategy that consists of stopping the algorithm before it converges.|
+|**Epoch**|In SGD and related algorithms, an iteration comprising all batches in a given partition. In the next epoch, a different partition is employed.|
+|**Generative Adversarial Network (GAN)**|Mathematically, a convolution is a function that can be defined as an ‘integral transform’ between two functions, where one of the functions must be a kernel.  The discrete version of the operation is just the weighting sum of several copies of the original function (f) shifting over the kernel.|
+|**Learning rate**| Specify the speed of gradient update|
+|**Loss**|Loss function measures how differences between observed and predicted target variables are quantified.|
 |**Neural layer**|‘Neurons’ are arranged in layers, i.e., groups of neurons that take the output of previous group of neurons as input |
 |**Neuron**|The basic unit of a DL algorithm. A ‘neuron’ takes as input a list of variable values (x) multiplied by ‘weights’ (w) and, as output, produces a non-linear transformation f(w’x + b) where f is the activation function and b is the bias. Both w and b need to be estimated for each neuron such that the loss is minimized across the whole set of neurons.|
 |**Multilayer Perceptron (MLP)**|Multilayer Perceptron Network is one of the most popular NN architectures, which consists of a series of fully connected layers, called input, hidden and output layers. Layers are connected by a directed graph. |
-|**Convolutional Neural Network (CNN)**|CNNs are an especial case of Neural Networks which uses convolution instead a full matrix multiplication in the hidden layers. A typical CNN is made up of dense fully connected layers and ‘convolutional layers’. The convolution is a type of linear mathematical operation.  |
-|**Recurrent Neural Network (RNN)**|RNN architecture considers information from multiple previous layers. Then, in the RNN model, the current hidden layer is a non-linear function of both the previous layer(s) and of the current input (x). The model has memory since the bias term is based on the ‘past’. These networks can be used in temporal -like data structures. |
-|**Generative Adversarial Network (GAN)**|Mathematically, a convolution is a function that can be defined as an ‘integral transform’ between two functions, where one of the functions must be a kernel.  The discrete version of the operation is just the weighting sum of several copies of the original function (f) shifting over the kernel.|
+|**Optimizer**|Algorithm to find weights (w and b) that minimize the loss function. Most DL optimizers are based on Stochastic Gradient Descent (SGD).|
 |**Pooling**|A pooling function substitutes the output of a network at a certain location with a summary statistic of the neighboring outputs. This is one of the crucial steps on the CNN architecture. The most common pooling operations are maximum, mean, median.|
-|**Activation function**|The mathematical function f that produces neuron’s output f(w’x + b).|
+|**Recurrent Neural Network (RNN)**|RNN architecture considers information from multiple previous layers. Then, in the RNN model, the current hidden layer is a non-linear function of both the previous layer(s) and of the current input (x). The model has memory since the bias term is based on the ‘past’. These networks can be used in temporal -like data structures. |
+|**Stochastic Gradient Descent (SGD)**|An optimizing algorithm that consists of randomly partitioning the whole data set in subsets called ‘batches’ or ‘minibatches’ and update the gradient using only that data subset. The next batch is used in next iteration.|
 |**Weight regularization**|An excess of parameters (weights, w) may produce the phenomenon called ‘overfitting’, which means that the model adjusts to the observed data very well, but prediction of new unobserved data is very poor. To avoid this, weights are estimated subject to constraints, a strategy called ‘penalization’ or ‘regularization’. The two most frequent regularizations are the L1 and L2 norms, which set restrictions on the sum of absolute values of w (L1) or of the square values (L2)|
-|**Dropout**|Dropout means that a given percentage of neurons output is set to zero. The percentage is kept constant, but the specific neurons are randomly sampled in every iteration. The goal of dropout is to avoid overfitting.|
-|**Early stopping**|An anti-overfitting strategy that consists of stopping the algorithm before it converges.|
 
 ### A Generic Keras Pipeline
 
