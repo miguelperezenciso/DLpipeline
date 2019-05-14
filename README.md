@@ -18,7 +18,7 @@ Implementing DL, despite all its theoretical and computational complexities, is 
 Here we describe some Keras implementation details. Complete code is in [jupyter notebook](https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL.ipynb), and example data are [DATA](https://github.com/miguelperezenciso/DLpipeline/tree/master/DATA) folder. To run the script, you need to have installed Keras and TensorFlow, preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
 ### Deep Learning Jargon
-DL is full of specific terms, here a few of the most relevant terms are defined (just in case).
+DL is full of specific terms, here a few of the most relevant ones are defined (just in case).
 
 |Term|Definition|
 |:----:|----------|
