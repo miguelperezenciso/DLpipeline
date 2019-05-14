@@ -300,7 +300,7 @@ The next table lists the main DL hyperparameters:
 ### List of main DL definitions
 
 |Term|Definition|
-|----|----------|
+|:----:|----------|
 |**Loss**|Loss function measures how differences between observed and predicted target variables are quantified.|
 |**Optimizer**|Algorithm to find weights (w and b) that minimize the loss function. Most DL optimizers are based on Stochastic Gradient Descent (SGD).|
 |**Backpropagation**|Backpropagation is an efficient algorithm to compute the loss, it propagates the error at the output layer level backward. Then, the gradient of previous layers can be computed easily using the chain rule for derivatives.|
