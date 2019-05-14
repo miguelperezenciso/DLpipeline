@@ -25,11 +25,12 @@ DL is full of specific terms, here a few of the most relevant ones are defined (
 |**Activation function**|The mathematical function f that produces neuron’s output f(w’x + b).|
 |**Backpropagation**|Backpropagation is an efficient algorithm to compute the loss, it propagates the error at the output layer level backward. Then, the gradient of previous layers can be computed easily using the chain rule for derivatives.|
 |**Batch**|In SGD, each of the sample partitions within a given epoch|
+|**Convolution kernel**|Mathematically, a convolution is a function that can be defined as an ‘integral transform’ between two functions, where one of the functions must be a kernel. The discrete version of the operation is just the weighting sum of several copies of the original function (f) shifting over the kernel.|
 |**Convolutional Neural Network (CNN)**|CNNs are an especial case of Neural Networks which uses convolution instead a full matrix multiplication in the hidden layers. A typical CNN is made up of dense fully connected layers and ‘convolutional layers’. The convolution is a type of linear mathematical operation.  |
 |**Dropout**|Dropout means that a given percentage of neurons output is set to zero. The percentage is kept constant, but the specific neurons are randomly sampled in every iteration. The goal of dropout is to avoid overfitting.|
 |**Early stopping**|An anti-overfitting strategy that consists of stopping the algorithm before it converges.|
 |**Epoch**|In SGD and related algorithms, an iteration comprising all batches in a given partition. In the next epoch, a different partition is employed.|
-|**Generative Adversarial Network (GAN)**|Mathematically, a convolution is a function that can be defined as an ‘integral transform’ between two functions, where one of the functions must be a kernel.  The discrete version of the operation is just the weighting sum of several copies of the original function (f) shifting over the kernel.|
+|**Generative Adversarial Network (GAN)**|GANs are based in a simple idea: train two networks simultaneously, the Generator (G), which defines a probability distribution based on the information from the samples, and the Discriminator (D), which distinguishes data produced by G from the real data.|
 |**Learning rate**| Specify the speed of gradient update|
 |**Loss**|Loss function measures how differences between observed and predicted target variables are quantified.|
 |**Neural layer**|‘Neurons’ are arranged in layers, i.e., groups of neurons that take the output of previous group of neurons as input |
