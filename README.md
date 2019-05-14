@@ -261,9 +261,11 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation 
 from keras import regularizers
 
-model.add(Dense(64, input_dim=64,
-kernel_regularizer=regularizers.l2(0.01), 
-activity_regularizer=regularizers.l1(0.01)))
+model.add(Dense(64, 
+                input_dim=64,
+                kernel_regularizer=regularizers.l2(0.01), 
+                activity_regularizer=regularizers.l1(0.01) )
+          )
 ```
 
 In Keras, different **dropout** rates can be specified for each layer, after its definition, e.g.:
