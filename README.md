@@ -31,6 +31,7 @@ DL is full of specific terms, here a few of the most relevant ones are defined (
 |**Early stopping**|An anti-overfitting strategy that consists of stopping the algorithm before it converges.|
 |**Epoch**|In SGD and related algorithms, an iteration comprising all batches in a given partition. In the next epoch, a different partition is employed.|
 |**Generative Adversarial Network (GAN)**|GANs are based in a simple idea: train two networks simultaneously, the Generator (G), which defines a probability distribution based on the information from the samples, and the Discriminator (D), which distinguishes data produced by G from the real data.|
+|**Kernel = Filter = Tensor**|In DL terminology, the kernel is a multidimensional array of weights.|
 |**Learning rate**| Specify the speed of gradient update|
 |**Loss**|Loss function measures how differences between observed and predicted target variables are quantified.|
 |**Neural layer**|‘Neurons’ are arranged in layers, i.e., groups of neurons that take the output of previous group of neurons as input |
