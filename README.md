@@ -318,5 +318,5 @@ The next table lists the main DL hyperparameters:
 |Neurons per layer|The bigger the number, the higher the flexibility.|The bigger the number, the higher the flexibility but may increase overfitting and poor training.|
 |Convolutinal kernel width*|A larger kernel allows learning more complex patterns.|A larger kernel allows learning more complex patterns.|
 |Activation|Makes possible to learn non-linear complex functional mappings between the inputs and response variable|Numerous options. No uniformly best function.|
-|Weight regularization|Controls overfitting.|Decreasing the weight regularization allows the model to fit the training data better.|
+|Weight regularization|Controls overfitting.|Decreasing the weight regularization allows the model to fit the training data better, with the risk of a poor prediction.|
 |Dropout|Controls overfitting.|A higher dropout helps to reduce overfitting.|
