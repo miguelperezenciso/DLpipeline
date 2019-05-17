@@ -1,5 +1,5 @@
 ## DLpipeline
-### A Guide on Deep Learning for Genomic Prediction: A Keras based pipeline to implement deep learning
+### A Guide on Deep Learning for Genomic Prediction: A Keras Based Pipeline
 #### M Pérez-Enciso & LM Zingaretti
 #### miguel.perez@uab.es, laura.zingaretti@cragenomica.es
 
