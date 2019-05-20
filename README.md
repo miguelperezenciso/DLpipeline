@@ -52,7 +52,7 @@ After uploading, preprocessing and partitioning the dataset, an analysis pipelin
 * Training: The model is fitted to the data and parameters are estimated. The number of iterations (‘epochs’) and batch size are specified, input and target variables need to be provided. The input data size must match that defined in step 2.
 * Model predictions are validated via cross-validation.
 
-**IMPORTANT NOTE:** This assumes that the DL architecture (eg, number of neurons, layers...) has been specified. Determining the optimum architecture is a serious and time consuming task that should be carefully done. Check [below] (https://github.com/miguelperezenciso/DLpipeline#hyperparameter-optimization) and the [Talos](https://autonomio.github.io/docs_talos/)  scripts in the jupyter notebook.
+**IMPORTANT NOTE:** This assumes that the DL architecture (eg, number of neurons, layers...) has been specified. Determining the optimum architecture is a serious and time consuming task that should be carefully done. Check [below](https://github.com/miguelperezenciso/DLpipeline#hyperparameter-optimization) and the [Talos](https://autonomio.github.io/docs_talos/)  scripts in the jupyter notebook.
 
 A generic Keras script would look like:
 
