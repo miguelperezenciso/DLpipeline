@@ -30,7 +30,7 @@ DL is full of specific terms, here a few of the most relevant ones are defined (
 |**Dropout**|Dropout means that a given percentage of neurons output is set to zero. The percentage is kept constant, but the specific neurons are randomly sampled in every iteration. The goal of dropout is to avoid overfitting.|
 |**Early stopping**|An anti-overfitting strategy that consists of stopping the algorithm before it converges.|
 |**Epoch**|In **SGD** and related algorithms, an iteration comprising all batches in a given partition. In the next epoch, a different partition is employed.|
-|**Feature**|In machine learning terminology, independent varibale, i.e., SNP here|
+|**Feature**|In machine learning terminology, independent variable, i.e., SNP here|
 |**Generative Adversarial Network (GAN)**|GANs are based in a simple idea: train two networks simultaneously, the Generator (G), which defines a probability distribution based on the information from the samples, and the Discriminator (D), which distinguishes data produced by G from the real data.|
 |**Kernel = Filter = Tensor**|In DL terminology, the kernel is a multidimensional array of weights.|
 |**Learning rate**|Specify the speed of gradient update|
