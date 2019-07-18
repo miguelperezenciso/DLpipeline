@@ -329,3 +329,9 @@ The next table lists the main DL hyperparameters:
 |Activation|Makes possible to learn non-linear complex functional mappings between the inputs and response variable|Numerous options. No uniformly best function.|
 |Weight regularization|Controls overfitting.|Decreasing the weight regularization allows the model to fit the training data better, with the risk of a poor prediction.|
 |Dropout|Controls overfitting.|A higher dropout helps to reduce overfitting.|
+
+***
+### Citations
+Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes. In press
+
+[Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
