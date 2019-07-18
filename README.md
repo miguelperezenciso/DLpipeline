@@ -1,11 +1,12 @@
 ## DLpipeline
-### A Guide on Deep Learning for Genomic Prediction: A Keras Based Pipeline
+### A Guide on Deep Learning for Complex Trait Genomic Prediction
+#### A Keras Based Pipeline
 #### M Pérez-Enciso & LM Zingaretti
 #### miguel.perez@uab.es, laura.zingaretti@cragenomica.es
 
 If you find this resource useful, please cite:
 
-Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Genomic Prediction. submitted
+Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes. In press
 
 and possibly
 
