@@ -6,7 +6,7 @@
 
 If you find this resource useful, please cite:
 
-Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes. In press
+[Pérez-Enciso M, Zingaretti LM. 2019. A Guide for Using Deep Learning for Complex Trait Genomic Prediction. Genes, 10, 553.](https://www.mdpi.com/2073-4425/10/7/553)
 
 and possibly
 
@@ -332,6 +332,6 @@ The next table lists the main DL hyperparameters:
 
 ***
 ### Citations
-Pérez-Enciso M, Zingaretti LM, 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes. In press
+[Pérez-Enciso M, Zingaretti LM. 2019. A Guide for Using Deep Learning for Complex Trait Genomic Prediction. Genes, 10, 553.](https://www.mdpi.com/2073-4425/10/7/553)
 
 [Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
