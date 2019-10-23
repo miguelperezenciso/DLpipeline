@@ -4,13 +4,21 @@ Our pipeline sucefully run under the following version of the dependencies:
 
 
 talos==0.4.8
+
 seaborn==0.9.0
+
 wrangle==0.6.7
+
 scipy==1.2.0
+
 matplotlib==2.2.3
+
 numpy==1.16.4
+
 pandas==0.24.2
+
 Keras==2.2.4
+
 scikit_learn==0.21.3 
 
 Note that talos versions higher than 0.4.8 have some modifications of key functions, e.g. `fmeasure_acc` and `talos.model.layers` have been changed in the new talos version. The  `live` in callbacks does not works for newest talos version either. Please make sure you have the right versions before run the examples. 
