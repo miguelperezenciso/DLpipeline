@@ -330,6 +330,11 @@ The next table lists the main DL hyperparameters:
 |Weight regularization|Controls overfitting.|Decreasing the weight regularization allows the model to fit the training data better, with the risk of a poor prediction.|
 |Dropout|Controls overfitting.|A higher dropout helps to reduce overfitting.|
 
+### Usage 
+The full exambles can be found in PDL.ipynb file. Please make sure you have installed the right packages version in order to succefully run our examples. In the following link you can found more information about the required packages 
+
+- [1. Requirements](https://github.com/miguelperezenciso/DLpipeline/blob/master/inst/md/requirements.md)
+
 ***
 ### Citations
 [Pérez-Enciso M, Zingaretti LM. 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes, 10, 553.](https://www.mdpi.com/2073-4425/10/7/553)
