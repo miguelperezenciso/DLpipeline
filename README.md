@@ -333,7 +333,7 @@ The next table lists the main DL hyperparameters:
 ### Usage 
 The full exambles can be found in PDL.ipynb file. Please make sure you have installed the right packages version in order to succefully run our examples. In the following link you can found more information about the required packages 
 
-- [1. Requirements](https://github.com/miguelperezenciso/DLpipeline/blob/master/inst/md/requirements.md)
+- [Requirements](https://github.com/miguelperezenciso/DLpipeline/blob/master/inst/md/requirements.md)
 
 ***
 ### Citations
