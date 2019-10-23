@@ -1,0 +1,9 @@
+talos==0.4.8
+seaborn==0.9.0
+wrangle==0.6.7
+scipy==1.2.0
+matplotlib==2.2.3
+numpy==1.16.4
+pandas==0.24.2
+Keras==2.2.4
+scikit_learn==0.21.3
