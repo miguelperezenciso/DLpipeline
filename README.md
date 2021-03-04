@@ -12,6 +12,8 @@ and possibly
 
 [Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
 
+[Zingaretti LM, Gezan SA, Ferrão LFV, Osorio LF, Monfort A, Muñoz PR, Whitaker VM, Pérez-Enciso M. 2020. Exploring Deep Learning for Complex Trait Genomic Prediction in Polyploid Outcrossing Species. Frontiers in Plant Science 11:25](https://doi.org/10.3389/fpls.2020.00025)
+
  * * *
  
 Implementing DL, despite all its theoretical and computational complexities, is rather easy. This is thanks to Keras API (https://keras.io/) and TensorFlow (https://www.tensorflow.org/), which allow all intricacies to be encapsulated through very simple statements. TensorFlow is a machine-learning library developed by Google. In addition, the machine-learning python library scikit-learn (https://scikit-learn.org) is highly useful. Directly implementing DL in TensorFlow requires some knowledge of DL algorithms, and understanding the philosophy behind tensor (i.e., n-dimensional objects) manipulations. Fortunately, this can be avoided using Keras, a high-level python interface for TensorFlow and other DL libraries. Although alternatives to TensorFlow and Keras exist, we believe these two tools combined are currently the best options: they are simple to use and are well documented. 
