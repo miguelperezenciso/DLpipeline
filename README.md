@@ -348,6 +348,9 @@ The full exambles can be found in PDL.ipynb file. Please make sure you have inst
 
 ***
 ### Citations
+[Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
+
 [Pérez-Enciso M, Zingaretti LM. 2019. A Guide on Deep Learning for Complex Trait Genomic Prediction. Genes, 10, 553.](https://www.mdpi.com/2073-4425/10/7/553)
 
-[Bellot P, De Los Campos G, Pérez-Enciso M. 2018. Can Deep Learning Improve Genomic Prediction of Complex Human Traits? Genetics 210:809-819.](https://www.genetics.org/content/210/3/809)
+[Zingaretti LM, Gezan SA, Ferrão LFV, Osorio LF, Monfort A, Muñoz PR, Whitaker VM, Pérez-Enciso M. 2020. Exploring Deep Learning for Complex Trait Genomic Prediction in Polyploid Outcrossing Species. Frontiers in Plant Science 11:25](https://doi.org/10.3389/fpls.2020.00025)
+
