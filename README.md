@@ -21,7 +21,7 @@ Implementing DL, despite all its theoretical and computational complexities, is 
 Here we describe some Keras implementation details. Complete code is in [jupyter notebook](https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL.ipynb), and example data are [DATA](https://github.com/miguelperezenciso/DLpipeline/tree/master/DATA) folder. To run the script, you need to have installed Keras and TensorFlow, preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
 ### Practical recommendations
-These are some generic thoughts that you should consider when applying deep learning.
+Before you fully dive in deep learning, here are some generic thoughts that you should consider:
 - Before starting, inspect the data, both SNPs and phenotypic distributions. Look for unexpected, weird patterns that may cause biases or other artefacts. Standardize the variables and targets.
 - Use Keras with TensorFlow, together with Sci-Kit Learn, a collection of well documented, easy-to-use machine learning modules. Reuse, but test, available public software whenever possible.
 - Exercise prudence if extremely good or very poor results are obtained. Compare with other simpler methods such as ridge regression or random forests. Ample literature does support that differences between methods should not be dramatic.
