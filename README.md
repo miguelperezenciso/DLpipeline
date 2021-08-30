@@ -20,6 +20,9 @@ Implementing DL, despite all its theoretical and computational complexities, is 
 
 Here we describe some Keras implementation details. Complete code is in [jupyter notebook](https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL.ipynb), and example data are [DATA](https://github.com/miguelperezenciso/DLpipeline/tree/master/DATA) folder. To run the script, you need to have installed Keras and TensorFlow, preferably in a computer with GPU architecture. Installing TensorFlow, especially for the GPU architecture, may not be a smooth experience. If unsolved, an alternative is using a docker (i.e., a virtual machine) with all functionalities built-in, or a cloud-based machine already configured. One option is https://github.com/floydhub/dl-docker. 
 
+### Important note
+Code provided was programmed for tensorflow 1. Generally, only minor changes are required to adapt it to tensorflow 2, which has keras built in. Some packages do not work though, such as talos for parameter optimization. You are invited to consider kerastuner in the meantime (https://keras.io/keras_tuner/). We plan to provide fully adapted code to tf2 in the near future.
+
 ### Practical recommendations
 Before you fully dive in deep learning, here are some generic thoughts that you should consider:
 - Before starting, inspect the data, both SNPs and phenotypic distributions. Look for unexpected, weird patterns that may cause biases or other artefacts. Standardize the variables and targets.
