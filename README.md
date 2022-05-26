@@ -1,3 +1,10 @@
+## New!
+### version for tensorflow 2 
+
+[PDL_tf2.ipynb](https://github.com/miguelperezenciso/DLpipeline/blob/master/PDL_tf2.ipynb)
+
+Includes example with kears tuner for hyperparameter optimization.
+
 ## DLpipeline
 ### A Guide on Deep Learning for Complex Trait Genomic Prediction: A Keras Based Pipeline
 
