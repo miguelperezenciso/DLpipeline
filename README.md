@@ -9,7 +9,7 @@ Includes example with kears tuner for hyperparameter optimization.
 ### A Guide on Deep Learning for Complex Trait Genomic Prediction: A Keras Based Pipeline
 
 #### M Pérez-Enciso & LM Zingaretti
-#### miguel.perez@uab.es, laura.zingaretti@cragenomica.es
+#### miguel.perez@uab.es, m.lau.zingaretti@gmail.com
 
 If you find this resource useful, please cite:
 
